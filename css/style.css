@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #EAE7DC;
+}
+
+header {
+    background-color: #F6FCDF;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 120px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+header:hover {
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    text-decoration: none;
+    color: #31511E;
+    font-size: 2em;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transform: 0.3s ease;
+    transition: color 0.3s ease, 
+}
+
+.logo:hover {
+    color: #859F3D;
+    transform: scale(1.05);
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #31511E;
+    font-size: 1.2em;
+    font-weight: 400;
+    padding-left: 35px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navigation a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #859F3D;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1);
+}
+
+.navigation a:hover {
+    color: #859F3D;
+}
+
+.fb,
+.tw,
+.ig,
+.gh {
+    font-size: 2em;
+    padding-right: 30px;
+    color: #F1F0E8;
+    transition: color 0.3s ease;
+}
+
+.fb:hover {
+    color: #0041f5;
+}
+
+.ig:hover {
+    color: #db2d7b;
+}
+
+section {
+    padding: 100px 180px;
+    background-color: #F6FCDF;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url("../images/green\ lanskap.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    text-align: left;
+    box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.3);
+}
+
+.main h2 {
+    color: #F1F0E8;
+    font-weight: 600;
+    font-size: 1.6em;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.main h2 span {
+    color: #F1F0E8;
+    font-size: 2.5em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.main h3 {
+    color: #F1F0E8;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-btn {
+    text-decoration: none;
+    color: #F1F0E8;
+    background-color: #31511E;
+    font-size: 1.3em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    border-radius: 15px;
+    transition: all 0.4s ease, transform 0.3s ease;
+}
+
+.main-btn:hover {
+    background-color: #859F3D;
+    transform: scale(1.1);
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: #31511E;
+    font-size: 2.5em;
+    font-weight: 800;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    background-color: #F1F0E8;
+    width: 25em;
+    box-shadow: 0 10px 30px rgba(1, 1, 1, 0.1);
+    border-radius: 12px;
+    padding: 30px;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 20px 60px rgba(1, 1, 1, 0.2);
+}
+
+.icon {
+    color: #31511E;
+    font-size: 5em;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.icon:hover {
+    color: #859F3D;
+}
+
+.info h3 {
+    color: #31511E;
+    font-size: 1.3em;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.info {
+    text-align: center;
+}
+
+.info a {
+    text-decoration: none;
+    color: #31511E;
+}
+
+.info a:hover {
+    color: #859F3D;
+}
+
+.projects {
+    background-color: #1A1A19;
+    padding: 50px 0;
+}
+
+.project-card {
+    background-color: #F1F0E8;
+    border: 1px solid #F1F0E8;
+    min-height: 18em;
+    width: 25em;
+    border-radius: 15px;
+    margin: 30px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card:hover .project-image {
+    opacity: 0.8;
+}
+
+.project-image img {
+    width: 100%;
+}
+
+.project-info {
+    padding: 1.5em;
+}
+
+.project-catogrey {
+    font-size: 0.9em;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.project-title {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+.more-details {
+    text-decoration: none;
+    color: #31511E;
+    font-weight: 600;
+}
+
+.more-details:hover {
+    color: #859F3D;
+}
+
+.up {
+    text-align: center;
+    font-size: 3em;
+}
+
+.up .btn-up {
+    text-decoration: none;
+    color: #31511E;
+    font-weight: 600;
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.btn-up:hover {
+    color: #859F3D;
+    transform: scale(1.2);
+}
+
+.footer {
+    background-color: #1A1A19;
+    color: #F1F0E8;
+    padding: 3em 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.footer:hover {
+    background-color: #2C2C2C;
+}
+
+.footer-title {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.footer-title span {
+    color: #31511E;
+    transition: color 0.3s ease;
+}
+
+.footer-title span:hover {
+    color: #859F3D;
+}
+
+.footer .social-icons a {
+    font-size: 1.5em;
+    padding-right: 15px;
+    transition: transform 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    transform: scale(1.1);
+}
+
+.cards,
+.contact {
+    background-color: #F6FCDF;
+    padding: 50px 0;
+}
+
+/* Media Queries for responsive design */
+@media (max-width: 1023px) {
+    header {
+        padding: 15px 25px;
+    }
+
+    .navigation a {
+        padding-left: 15px;
+    }
+
+    .title {
+        font-size: 2.2em;
+    }
+
+    section {
+        padding: 90px 20px;
+    }
+
+    .main h2 {
+        font-size: 1.2em;
+    }
+
+    .main h3 {
+        font-size: 2em;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 641px) {
+    body {
+        font-size: 14px;
+    }
+
+    .main h2 {
+        font-size: 1em;
+    }
+
+    .main h3 {
+        font-size: 1.6em;
+    }
+}
